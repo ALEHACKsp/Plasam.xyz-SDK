@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\SDK">
+      <UniqueIdentifier>{5772dc98-e259-4204-a9d5-68199c162748}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\interfaces">
+      <UniqueIdentifier>{92ae5979-495d-4a3c-bebf-03a191046462}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\structures">
+      <UniqueIdentifier>{330928ce-14cd-458f-b053-8aefde7c14ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\features">
+      <UniqueIdentifier>{5d3c7fcc-f07b-45ac-870e-b0ce7a5f603e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDK\Classes">
+      <UniqueIdentifier>{0a41b622-581e-41eb-a136-2e05cdcc9890}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="HookManager.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="Aimbot.cpp">
+      <Filter>Source Files\features</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="VMT.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseEntity.cpp">
+      <Filter>Source Files\SDK\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="BasePlayer.cpp">
+      <Filter>Source Files\SDK\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="NetvarManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseWeapon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Math.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SDK.h">
+      <Filter>Source Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Source Files\SDK\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="VMT.h">
+      <Filter>Source Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="CUserCmd.h">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="QAngle.h">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientDll.h">
+      <Filter>Source Files\SDK\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Aimbot.h">
+      <Filter>Source Files\features</Filter>
+    </ClInclude>
+    <ClInclude Include="Hacks.h">
+      <Filter>Source Files\features</Filter>
+    </ClInclude>
+    <ClInclude Include="HookManager.h">
+      <Filter>Source Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Source Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseEntity.h">
+      <Filter>Source Files\SDK\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="BasePlayer.h">
+      <Filter>Source Files\SDK\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="NetvarManager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="recv.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="enums.h">
+      <Filter>Source Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientClass.h">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="singleton.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseWeapon.h" />
+    <ClInclude Include="Matrix.h">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StudioDefinitions.h">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Source Files\SDK\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineTrace.h">
+      <Filter>Source Files\SDK\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="MaterialDefinitions.h">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Math.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
