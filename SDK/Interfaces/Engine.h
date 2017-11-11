@@ -39,6 +39,12 @@ class EngineClient
 			return utils::emulate<OriginalFn>(this, 20)(this);
 		}
 
+		bool IsInGame()
+		{
+			typedef bool(__thiscall* OriginalFn)(PVOID);
+			return utils::emulate< OriginalFn >(this, 26)(this);
+		}
+
 		const VMatrix&	WorldToScreenMatrix(void)
 		{
 			typedef VMatrix&(__thiscall* _Orig)(void*);

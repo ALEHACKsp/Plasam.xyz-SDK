@@ -21,8 +21,13 @@ namespace HookManager
 	}
 	bool __stdcall CreateMove(float flInputSampleTime, CUserCmd* cmd)
 	{
-		aimbot::createMove(cmd);
-		TriggerBot::CreateMove(cmd);
+
+		//We only need to cheat if we're in game
+		if (g_EngineClient->IsInGame())
+		{
+			aimbot::createMove(cmd);
+			TriggerBot::CreateMove(cmd);
+		}
 
 		return 0;
 	};
@@ -34,7 +39,7 @@ namespace HookManager
 
 		Menu::Get().render();
 
-		if (InputSys::Get().IsKeyDown(VK_TAB) && options::misc::revealRanks)
+		if (g_InputSystem->IsButtonDown(KEY_TAB) && options::misc::revealRanks)
 		{
 			misc::rankReveal();
 		}
@@ -44,11 +49,15 @@ namespace HookManager
 
 	void __stdcall PaintTraverse(VPANEL panel, bool forceRepaint, bool allowForce)
 	{
-		static auto panelId = VPANEL{ 0 };
-		static auto oPaintTraverse = vguipanel_hook.get_original<PaintTraverse_t>(41);
+		//Don't need esp if we're not in game
+		if (!g_EngineClient->IsInGame())
+			return;
 
+		//Need this for crosshair and console
+		static auto oPaintTraverse = vguipanel_hook.get_original<PaintTraverse_t>(41);
 		oPaintTraverse(g_VGuiPanel, panel, forceRepaint, allowForce);
 
+		static auto panelId = VPANEL{ 0 };
 		if(options::visuals::enabled)
 		{
 			if (!panelId) {

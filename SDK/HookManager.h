@@ -5,6 +5,7 @@
 #include "VMT.h"
 #include "./Interfaces/ClientDll.h"
 #include "./Interfaces/Paint.h"
+#include "./Interfaces/InputSystem.h"
 #include "../features/Hacks.h"
 
 class CUserCmd;
