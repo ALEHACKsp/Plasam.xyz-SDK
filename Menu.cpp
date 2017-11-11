@@ -44,6 +44,8 @@ void aimTab()
 
 	ImGui::Separator();
 
+	ImGui::Columns(2);
+
 	ImGui::PushItemWidth(180);
 
 	ImGui::Combo("##AIMTARGET", &options::aimbot::bone, targets, IM_ARRAYSIZE(targets));
@@ -55,7 +57,13 @@ void aimTab()
 
 	ImGui::Checkbox("Friendly Fire", &options::aimbot::friendlyFire);
 
+	ImGui::NextColumn();
+
+	ImGui::Checkbox("Trigger Bot", &options::triggerbot::enabled);
+
 	ImGui::PopItemWidth();
+
+	ImGui::Columns(1);
 }
 
 void visualsTab()

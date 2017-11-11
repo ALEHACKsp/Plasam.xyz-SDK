@@ -51,7 +51,8 @@ private:
 
 	HWND            m_hTargetWindow;
 	LONG_PTR        m_ulOldWndProc;
-	KeyState       m_iKeyMap[256];
+	KeyState		m_iKeyMap[256];
+	
 
 	std::function<void(void)> m_Hotkeys[256];
 };

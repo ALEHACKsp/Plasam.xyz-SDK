@@ -22,6 +22,7 @@ namespace HookManager
 	bool __stdcall CreateMove(float flInputSampleTime, CUserCmd* cmd)
 	{
 		aimbot::createMove(cmd);
+		
 		TriggerBot::CreateMove(cmd);
 
 		return 0;

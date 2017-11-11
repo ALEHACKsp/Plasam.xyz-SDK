@@ -1,10 +1,22 @@
 #include "TriggerBot.h"
 
+//Resolve Externs
+bool options::triggerbot::enabled = false;
+
 void TriggerBot::CreateMove(CUserCmd* cmd)
 {
-	
+
+	if (!options::triggerbot::enabled)
+		return;
+
+	//Check triggerbot key state
+	if(!InputSys::Get().IsKeyDown(VK_TAB));
+		return;
 
 	BasePlayer* localPlayer = (BasePlayer*)g_EntityList->GetClientEntity(g_EngineClient->getLocalPlayer());
+
+	if (!localPlayer->isAlive())
+		return;
 
 	Vector traceStart, traceEnd;
 
@@ -23,7 +35,7 @@ void TriggerBot::CreateMove(CUserCmd* cmd)
 	CTraceFilter traceFilter;
 	traceFilter.pSkip = localPlayer;
 	
-	g_EngineTrace->TraceRay(ray, 0x46004003, &traceFilter, &tr);
+	g_EngineTrace->TraceRay(ray, MASK_SHOT, &traceFilter, &tr);
 
 	BasePlayer* player = (BasePlayer*)tr.hit_entity;
 
@@ -33,13 +45,10 @@ void TriggerBot::CreateMove(CUserCmd* cmd)
 	if (!player->isPlayer())
 		return;
 
-	if (!player->isDormant())
+	if (player->isDormant())
 		return;
 
 	if (!player->isAlive())
-		return;
-
-	if (!localPlayer->CanSeePlayer(player, HITBOX_HEAD))
 		return;
 
 	BaseWeapon*  activeWeapon = (BaseWeapon*)g_EntityList->GetClientEntityFromHandle(localPlayer->m_hActiveWeapon());

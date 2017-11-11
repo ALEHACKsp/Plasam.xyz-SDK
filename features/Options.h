@@ -16,6 +16,10 @@ namespace options
 		extern float	rcs;
 		extern float	killTimeout;
 	}
+	namespace triggerbot
+	{
+		extern bool		enabled;
+	}
 	namespace visuals
 	{
 		extern bool		enabled;
