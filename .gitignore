@@ -42,3 +42,4 @@
 
 # Build results
 **/Debug
+**/.vs
