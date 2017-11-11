@@ -1,10 +1,10 @@
 #include "SDK.h"
 
-#include "Engine.h"
-#include "ClientDll.h"
-#include "Model.h"
-#include "Convar.h"
-#include "Paint.h"
+#include "./Interfaces/Engine.h"
+#include "./Interfaces/ClientDll.h"
+#include "./Interfaces/Model.h"
+#include "./Interfaces/Convar.h"
+#include "./Interfaces/Paint.h"
 
 //Resolve externs
 

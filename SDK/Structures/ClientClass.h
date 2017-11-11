@@ -1,6 +1,6 @@
 #pragma once
 
-#include "recv.h"
+#include "../../recv.h"
 
 class ClientClass;
 class IClientNetworkable;

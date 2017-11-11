@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Color.h"
-#include "Utils.h"
+#include "../Structures/Color.h"
+#include "../Utils.h"
 
 class ConVar
 {

@@ -1,12 +1,12 @@
 #pragma once
 
-#include "../BasePlayer.h"
-#include "../BaseWeapon.h"
-#include "../CUserCmd.h"
-#include "../Engine.h"
-#include "../ClientDll.h"
-#include "../Vector.h"
-#include "../QAngle.h"
+#include "../SDK/Classes/BasePlayer.h"
+#include "../SDK/Classes/BaseWeapon.h"
+#include "../SDK/Structures/CUserCmd.h"
+#include "../SDK/Interfaces/Engine.h"
+#include "../SDK/Interfaces/ClientDll.h"
+#include "../SDK/Structures/Vector.h"
+#include "../SDK/Structures/QAngle.h"
 #include "../Math.h"
 
 namespace TriggerBot

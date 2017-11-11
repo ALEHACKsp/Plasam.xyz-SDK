@@ -1,17 +1,20 @@
 #pragma once
 
-#include "../Utils.h"
+#include "../SDK/Utils.h"
+#include "../Math.h"
 
 //Include Structures
-#include "../QAngle.h"
-#include "../Vector.h"
-#include "../BasePlayer.h"
-#include "../BaseWeapon.h"
+#include "../SDK/Structures/QAngle.h"
+#include "../SDK/Structures/Vector.h"
+#include "../SDK/Classes/BasePlayer.h"
+#include "../SDK/Classes/BaseWeapon.h"
+#include "../SDK/Structures/CUserCmd.h"
 #include "./Options.h"
 
 //Include Interfaces
-#include "../Engine.h"
-#include "../CUserCmd.h"
+#include "../SDK/Interfaces/Engine.h"
+#include "../SDK/Interfaces/ClientDll.h"
+
 
 namespace aimbot
 {

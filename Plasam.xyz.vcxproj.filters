@@ -31,38 +31,11 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sdk.cpp">
-      <Filter>Source Files\SDK</Filter>
-    </ClCompile>
-    <ClCompile Include="HookManager.cpp">
-      <Filter>Source Files\SDK</Filter>
-    </ClCompile>
-    <ClCompile Include="Utils.cpp">
-      <Filter>Source Files\SDK</Filter>
-    </ClCompile>
-    <ClCompile Include="VMT.cpp">
-      <Filter>Source Files\SDK</Filter>
-    </ClCompile>
-    <ClCompile Include="BaseEntity.cpp">
-      <Filter>Source Files\SDK\Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="BasePlayer.cpp">
-      <Filter>Source Files\SDK\Classes</Filter>
-    </ClCompile>
     <ClCompile Include="NetvarManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BaseWeapon.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Color.cpp">
-      <Filter>Source Files\SDK\structures</Filter>
-    </ClCompile>
     <ClCompile Include="Math.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Matrix.cpp">
-      <Filter>Source Files\SDK\structures</Filter>
     </ClCompile>
     <ClCompile Include="Menu.cpp">
       <Filter>Source Files</Filter>
@@ -79,12 +52,6 @@
     <ClCompile Include="imgui\directx9\imgui_impl_dx9.cpp">
       <Filter>Source Files\imgui\directx9</Filter>
     </ClCompile>
-    <ClCompile Include="hwid.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="md5.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="features\Aimbot.cpp">
       <Filter>Source Files\features</Filter>
     </ClCompile>
@@ -97,79 +64,46 @@
     <ClCompile Include="features\Visuals.cpp">
       <Filter>Source Files\features</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\Classes\BaseEntity.cpp">
+      <Filter>Source Files\SDK\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Classes\BasePlayer.cpp">
+      <Filter>Source Files\SDK\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Classes\BaseWeapon.cpp">
+      <Filter>Source Files\SDK\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Structures\Color.cpp">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Structures\Matrix.cpp">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\HookManager.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\sdk.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Utils.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\VMT.cpp">
+      <Filter>Source Files\SDK</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SDK.h">
-      <Filter>Source Files\SDK</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine.h">
-      <Filter>Source Files\SDK\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector.h">
-      <Filter>Source Files\SDK\structures</Filter>
-    </ClInclude>
-    <ClInclude Include="VMT.h">
-      <Filter>Source Files\SDK</Filter>
-    </ClInclude>
-    <ClInclude Include="CUserCmd.h">
-      <Filter>Source Files\SDK\structures</Filter>
-    </ClInclude>
-    <ClInclude Include="QAngle.h">
-      <Filter>Source Files\SDK\structures</Filter>
-    </ClInclude>
-    <ClInclude Include="ClientDll.h">
-      <Filter>Source Files\SDK\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="HookManager.h">
-      <Filter>Source Files\SDK</Filter>
-    </ClInclude>
-    <ClInclude Include="Utils.h">
-      <Filter>Source Files\SDK</Filter>
-    </ClInclude>
-    <ClInclude Include="BaseEntity.h">
-      <Filter>Source Files\SDK\Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="BasePlayer.h">
-      <Filter>Source Files\SDK\Classes</Filter>
-    </ClInclude>
     <ClInclude Include="NetvarManager.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="recv.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="enums.h">
-      <Filter>Source Files\SDK</Filter>
-    </ClInclude>
-    <ClInclude Include="ClientClass.h">
-      <Filter>Source Files\SDK\structures</Filter>
-    </ClInclude>
     <ClInclude Include="singleton.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="Matrix.h">
-      <Filter>Source Files\SDK\structures</Filter>
-    </ClInclude>
-    <ClInclude Include="StudioDefinitions.h">
-      <Filter>Source Files\SDK\structures</Filter>
-    </ClInclude>
-    <ClInclude Include="Model.h">
-      <Filter>Source Files\SDK\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="EngineTrace.h">
-      <Filter>Source Files\SDK\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="MaterialDefinitions.h">
-      <Filter>Source Files\SDK\structures</Filter>
-    </ClInclude>
-    <ClInclude Include="Color.h">
-      <Filter>Source Files\SDK\structures</Filter>
-    </ClInclude>
     <ClInclude Include="Math.h">
       <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BaseWeapon.h">
-      <Filter>Source Files\SDK\Classes</Filter>
     </ClInclude>
     <ClInclude Include="Menu.h">
       <Filter>Source Files</Filter>
@@ -198,21 +132,6 @@
     <ClInclude Include="imgui\directx9\imgui_impl_dx9.h">
       <Filter>Source Files\imgui\directx9</Filter>
     </ClInclude>
-    <ClInclude Include="Convar.h">
-      <Filter>Source Files\SDK\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="Paint.h">
-      <Filter>Source Files\SDK\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="hwid.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="md5.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CHandle.h">
-      <Filter>Source Files\SDK\structures</Filter>
-    </ClInclude>
     <ClInclude Include="features\Aimbot.h">
       <Filter>Source Files\features</Filter>
     </ClInclude>
@@ -230,6 +149,75 @@
     </ClInclude>
     <ClInclude Include="features\Visuals.h">
       <Filter>Source Files\features</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Classes\BaseEntity.h">
+      <Filter>Source Files\SDK\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Classes\BasePlayer.h">
+      <Filter>Source Files\SDK\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Classes\BaseWeapon.h">
+      <Filter>Source Files\SDK\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Interfaces\ClientDll.h">
+      <Filter>Source Files\SDK\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Interfaces\Convar.h">
+      <Filter>Source Files\SDK\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Interfaces\Engine.h">
+      <Filter>Source Files\SDK\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Interfaces\EngineTrace.h">
+      <Filter>Source Files\SDK\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Interfaces\Model.h">
+      <Filter>Source Files\SDK\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Interfaces\Paint.h">
+      <Filter>Source Files\SDK\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Structures\CHandle.h">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Structures\ClientClass.h">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Structures\Color.h">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Structures\CUserCmd.h">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Structures\MaterialDefinitions.h">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Structures\Matrix.h">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Structures\QAngle.h">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Structures\StudioDefinitions.h">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Structures\Vector.h">
+      <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\enums.h">
+      <Filter>Source Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\HookManager.h">
+      <Filter>Source Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK.h">
+      <Filter>Source Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\Utils.h">
+      <Filter>Source Files\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\VMT.h">
+      <Filter>Source Files\SDK</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

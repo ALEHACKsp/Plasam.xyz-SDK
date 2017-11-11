@@ -9,15 +9,15 @@
 
 #include "Utils.h"
 
-#include "Vector.h"
-#include "QAngle.h"
-#include "CUserCmd.h"
-#include "VMT.h"
+#include "./Structures/Vector.h"
+#include "./Structures/QAngle.h"
+#include "./Structures/CUserCmd.h"
+#include "./VMT.h"
 
-#include "input.h"
-#include "Menu.h"
-#include "HookManager.h"
-#include "NetvarManager.h"
+#include "../input.h"
+#include "../Menu.h"
+#include "./HookManager.h"
+#include "../NetvarManager.h"
 
 #define CHEAT_NAME "Plasam.xyz"
 

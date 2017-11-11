@@ -3,8 +3,8 @@
 class BaseEntity;
 class CBaseHandle;
 
-#include "Matrix.h"
-#include "Utils.h"
+#include "../Structures/Matrix.h"
+#include "../Utils.h"
 
 class EngineClient
 {

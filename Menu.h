@@ -1,10 +1,10 @@
 #pragma once
 
 #include "input.h"
-#include "Color.h"
+#include "./SDK/Structures/Color.h"
 #include "./features/Options.h"
 
-#include "Convar.h"
+#include "./SDK/Interfaces/Convar.h"
 
 #include "imgui\imgui.h"
 #include "ImGUI\Directx9\imgui_impl_dx9.h"

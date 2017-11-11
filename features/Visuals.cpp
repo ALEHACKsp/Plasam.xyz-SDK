@@ -1,12 +1,12 @@
 #include "visuals.h"
 
-#include "../Paint.h"
-#include "../math.h"
-#include "../utils.h"
-#include "../Engine.h"
-#include "../Color.h"
+#include "../SDK/Interfaces/Paint.h"
+#include "../Math.h"
+#include "../SDK/utils.h"
+#include "../SDK/Interfaces/Engine.h"
+#include "../SDK/Structures/Color.h"
 
-#include "../BasePlayer.h"
+#include "../SDK/Classes/BasePlayer.h"
 
 HFont esp_font;
 HFont defuse_font;

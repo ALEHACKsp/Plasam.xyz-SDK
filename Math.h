@@ -1,10 +1,10 @@
 #pragma once
 
-#include "QAngle.h"
-#include "Vector.h"
-#include "Matrix.h"
+#include "./SDK/Structures/QAngle.h"
+#include "./SDK/Structures/Vector.h"
+#include "./SDK/Structures/Matrix.h"
 
-#include "Engine.h"
+#include "./SDK/Interfaces/Engine.h"
 
 #include <DirectXMath.h>
 

@@ -1,10 +1,10 @@
 #pragma once
 
-#include "MaterialDefinitions.h"
-#include "StudioDefinitions.h"
-#include "EngineTrace.h"
-#include "Vector.h"
-#include "QAngle.h"
+#include "../Structures/MaterialDefinitions.h"
+#include "../Structures/StudioDefinitions.h"
+#include "../Structures/Vector.h"
+#include "../Structures/QAngle.h"
+#include "../Interfaces/EngineTrace.h"
 
 class IVModelInfo
 {

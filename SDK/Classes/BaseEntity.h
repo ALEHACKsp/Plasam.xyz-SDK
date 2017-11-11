@@ -1,17 +1,18 @@
 #pragma once
 
-#include "Vector.h"
-#include "QAngle.h"
-#include "CHandle.h"
-#include "Matrix.h"
-#include "Math.h"
-#include "StudioDefinitions.h"
-#include "enums.h"
+#include "../Structures/Vector.h"
+#include "../Structures/QAngle.h"
+#include "../Structures/CHandle.h"
+#include "../Structures/Matrix.h"
+#include "./Math.h"
+#include "../Structures/StudioDefinitions.h"
+#include "../enums.h"
 
-#include "NetvarManager.h"
-#include "Utils.h"
+#include "../../NetvarManager.h"
+#include "../Utils.h"
+#include "../../Math.h"
 
-#include "Model.h"
+#include "../Interfaces/Model.h"
 
 #define NETVAR(type, name, table, netvar)									\
     type& name##() const {													\

@@ -3,7 +3,7 @@
 #include <fstream>
 #include <utility>
 
-#include "ClientDll.h"
+#include "./SDK/Interfaces/ClientDll.h"
 
 void NetvarSys::Initialize()
 {

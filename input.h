@@ -9,7 +9,7 @@
 #include <stdexcept>
 
 #include "singleton.h"
-#include "SDK.h"
+#include "./SDK/SDK.h"
 
 enum class KeyState
 {

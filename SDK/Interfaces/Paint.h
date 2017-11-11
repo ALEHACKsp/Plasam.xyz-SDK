@@ -1,8 +1,8 @@
 #pragma once
 
 #include <Windows.h>
-#include "Utils.h"
-#include "Color.h"
+#include "../Utils.h"
+#include "../Structures/Color.h"
 
 enum FontFeature
 {

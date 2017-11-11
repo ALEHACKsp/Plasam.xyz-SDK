@@ -3,9 +3,9 @@
 #include "SDK.h"
 
 #include "VMT.h"
-#include "ClientDll.h"
-#include "Paint.h"
-#include "./features/Hacks.h"
+#include "./Interfaces/ClientDll.h"
+#include "./Interfaces/Paint.h"
+#include "../features/Hacks.h"
 
 class CUserCmd;
 class ClientMode;

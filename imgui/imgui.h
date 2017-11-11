@@ -9,8 +9,8 @@
 #pragma once
 
 #if !defined(IMGUI_DISABLE_INCLUDE_IMCONFIG_H) || defined(IMGUI_INCLUDE_IMCONFIG_H)
-#include "../Color.h"
-#include "../Vector.h"
+#include "../SDK/Structures/Color.h"
+#include "../SDK/Structures/Vector.h"
 #include "imconfig.h"       // User-editable configuration file
 #endif
 #include <float.h>          // FLT_MAX

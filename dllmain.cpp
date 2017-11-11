@@ -1,16 +1,11 @@
 #define _CRT_SECURE_NO_WARNINGS
-#define HWID "71d9f4b05c2b1242b95930f43d9b10e9"
 
-#include "hwid.h"
-#include "SDK.h"
+#include "./SDK/SDK.h"
 
 HWND windowHandle = NULL;
 
 void cheatThread(LPVOID base)
 {
-	//if (HWID != hwid::get())
-	//	return;
-
 	sdk::initialize();
 	NetvarSys::Get().Initialize();
 	InputSys::Get().Initialize();

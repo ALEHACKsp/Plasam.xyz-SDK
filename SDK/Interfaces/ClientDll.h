@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ClientClass.h"
+#include "../Structures/ClientClass.h"
 
 class CGlobalVarsBase
 {

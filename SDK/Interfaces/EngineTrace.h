@@ -99,7 +99,7 @@
 
 #pragma endregion
 
-#include "Vector.h"
+#include "../Structures/Vector.h"
 
 enum class TraceType
 {

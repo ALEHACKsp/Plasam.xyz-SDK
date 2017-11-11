@@ -1,6 +1,6 @@
 #include "BasePlayer.h"
 
-#include "Matrix.h"
+#include "../Structures/Matrix.h"
 
 Vector BasePlayer::getEyePos()
 {
