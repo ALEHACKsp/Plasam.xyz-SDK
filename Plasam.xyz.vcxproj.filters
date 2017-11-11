@@ -37,9 +37,6 @@
     <ClCompile Include="HookManager.cpp">
       <Filter>Source Files\SDK</Filter>
     </ClCompile>
-    <ClCompile Include="Aimbot.cpp">
-      <Filter>Source Files\features</Filter>
-    </ClCompile>
     <ClCompile Include="Utils.cpp">
       <Filter>Source Files\SDK</Filter>
     </ClCompile>
@@ -82,19 +79,22 @@
     <ClCompile Include="imgui\directx9\imgui_impl_dx9.cpp">
       <Filter>Source Files\imgui\directx9</Filter>
     </ClCompile>
-    <ClCompile Include="Visuals.cpp">
-      <Filter>Source Files\features</Filter>
-    </ClCompile>
-    <ClCompile Include="misc.cpp">
-      <Filter>Source Files\features</Filter>
-    </ClCompile>
     <ClCompile Include="hwid.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="md5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TriggerBot.cpp">
+    <ClCompile Include="features\Aimbot.cpp">
+      <Filter>Source Files\features</Filter>
+    </ClCompile>
+    <ClCompile Include="features\Misc.cpp">
+      <Filter>Source Files\features</Filter>
+    </ClCompile>
+    <ClCompile Include="features\TriggerBot.cpp">
+      <Filter>Source Files\features</Filter>
+    </ClCompile>
+    <ClCompile Include="features\Visuals.cpp">
       <Filter>Source Files\features</Filter>
     </ClCompile>
   </ItemGroup>
@@ -119,12 +119,6 @@
     </ClInclude>
     <ClInclude Include="ClientDll.h">
       <Filter>Source Files\SDK\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="Aimbot.h">
-      <Filter>Source Files\features</Filter>
-    </ClInclude>
-    <ClInclude Include="Hacks.h">
-      <Filter>Source Files\features</Filter>
     </ClInclude>
     <ClInclude Include="HookManager.h">
       <Filter>Source Files\SDK</Filter>
@@ -207,17 +201,8 @@
     <ClInclude Include="Convar.h">
       <Filter>Source Files\SDK\interfaces</Filter>
     </ClInclude>
-    <ClInclude Include="Visuals.h">
-      <Filter>Source Files\features</Filter>
-    </ClInclude>
     <ClInclude Include="Paint.h">
       <Filter>Source Files\SDK\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="Options.h">
-      <Filter>Source Files\features</Filter>
-    </ClInclude>
-    <ClInclude Include="misc.h">
-      <Filter>Source Files\features</Filter>
     </ClInclude>
     <ClInclude Include="hwid.h">
       <Filter>Source Files</Filter>
@@ -225,11 +210,26 @@
     <ClInclude Include="md5.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="TriggerBot.h">
-      <Filter>Source Files\features</Filter>
-    </ClInclude>
     <ClInclude Include="CHandle.h">
       <Filter>Source Files\SDK\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="features\Aimbot.h">
+      <Filter>Source Files\features</Filter>
+    </ClInclude>
+    <ClInclude Include="features\Hacks.h">
+      <Filter>Source Files\features</Filter>
+    </ClInclude>
+    <ClInclude Include="features\Misc.h">
+      <Filter>Source Files\features</Filter>
+    </ClInclude>
+    <ClInclude Include="features\Options.h">
+      <Filter>Source Files\features</Filter>
+    </ClInclude>
+    <ClInclude Include="features\TriggerBot.h">
+      <Filter>Source Files\features</Filter>
+    </ClInclude>
+    <ClInclude Include="features\Visuals.h">
+      <Filter>Source Files\features</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

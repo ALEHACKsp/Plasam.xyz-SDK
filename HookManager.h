@@ -5,7 +5,7 @@
 #include "VMT.h"
 #include "ClientDll.h"
 #include "Paint.h"
-#include "Hacks.h"
+#include "./features/Hacks.h"
 
 class CUserCmd;
 class ClientMode;

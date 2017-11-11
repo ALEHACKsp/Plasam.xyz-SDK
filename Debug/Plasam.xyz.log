@@ -1,3 +1,13 @@
-﻿  sdk.cpp
-  Plasam.xyz.vcxproj -> Z:\Github\priv-New\Plasam.xyz\Debug\Plasam.xyz.dll
-  Plasam.xyz.vcxproj -> Z:\Github\priv-New\Plasam.xyz\Debug\Plasam.xyz.pdb (Partial PDB)
+﻿  TriggerBot.cpp
+  Generating Code...
+  Compiling...
+  sdk.cpp
+  input.cpp
+  Menu.cpp
+z:\github\plasam.xyz-sdk\menu.cpp(35): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\time.h(505): note: see declaration of 'localtime'
+z:\github\plasam.xyz-sdk\menu.cpp(132): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  HookManager.cpp
+  Generating Code...
+  dllmain.cpp
+  Plasam.xyz.vcxproj -> Z:\Github\Plasam.xyz-SDK\Debug\Plasam.xyz.dll

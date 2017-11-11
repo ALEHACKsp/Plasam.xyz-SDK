@@ -141,7 +141,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Aimbot.cpp" />
     <ClCompile Include="BaseEntity.cpp" />
     <ClCompile Include="BasePlayer.cpp" />
     <ClCompile Include="BaseWeapon.cpp" />
@@ -160,6 +159,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="features\Aimbot.cpp" />
+    <ClCompile Include="features\Misc.cpp" />
+    <ClCompile Include="features\TriggerBot.cpp" />
+    <ClCompile Include="features\Visuals.cpp" />
     <ClCompile Include="HookManager.cpp" />
     <ClCompile Include="hwid.cpp" />
     <ClCompile Include="imgui\directx9\imgui_impl_dx9.cpp" />
@@ -170,16 +173,12 @@
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="md5.cpp" />
     <ClCompile Include="Menu.cpp" />
-    <ClCompile Include="misc.cpp" />
     <ClCompile Include="NetvarManager.cpp" />
     <ClCompile Include="sdk.cpp" />
-    <ClCompile Include="TriggerBot.cpp" />
     <ClCompile Include="Utils.cpp" />
-    <ClCompile Include="Visuals.cpp" />
     <ClCompile Include="VMT.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Aimbot.h" />
     <ClInclude Include="BaseEntity.h" />
     <ClInclude Include="BasePlayer.h" />
     <ClInclude Include="BaseWeapon.h" />
@@ -192,7 +191,12 @@
     <ClInclude Include="Engine.h" />
     <ClInclude Include="EngineTrace.h" />
     <ClInclude Include="enums.h" />
-    <ClInclude Include="Hacks.h" />
+    <ClInclude Include="features\Aimbot.h" />
+    <ClInclude Include="features\Hacks.h" />
+    <ClInclude Include="features\Misc.h" />
+    <ClInclude Include="features\Options.h" />
+    <ClInclude Include="features\TriggerBot.h" />
+    <ClInclude Include="features\Visuals.h" />
     <ClInclude Include="HookManager.h" />
     <ClInclude Include="hwid.h" />
     <ClInclude Include="imgui\directx9\imgui_impl_dx9.h" />
@@ -208,20 +212,16 @@
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="md5.h" />
     <ClInclude Include="Menu.h" />
-    <ClInclude Include="misc.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="NetvarManager.h" />
-    <ClInclude Include="Options.h" />
     <ClInclude Include="Paint.h" />
     <ClInclude Include="QAngle.h" />
     <ClInclude Include="recv.h" />
     <ClInclude Include="SDK.h" />
     <ClInclude Include="singleton.h" />
     <ClInclude Include="StudioDefinitions.h" />
-    <ClInclude Include="TriggerBot.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="Vector.h" />
-    <ClInclude Include="Visuals.h" />
     <ClInclude Include="VMT.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
