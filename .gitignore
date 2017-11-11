@@ -41,5 +41,8 @@
 *.userprefs
 
 # Build results
+**/Release
 **/Debug
+
+#Visual Studio
 **/.vs
