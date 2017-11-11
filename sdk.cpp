@@ -3,6 +3,10 @@
 #include "Engine.h"
 #include "ClientDll.h"
 #include "Model.h"
+#include "Convar.h"
+#include "Paint.h"
+
+//Resolve externs
 
 EngineClient	* g_EngineClient	= nullptr;
 IEngineTrace	* g_EngineTrace		= nullptr;
@@ -10,7 +14,11 @@ EntityList		* g_EntityList		= nullptr;
 ClientDLL		* g_Client			= nullptr;
 ClientMode		* g_ClientMode		= nullptr;
 IVModelInfo		* g_ModelInfo		= nullptr;
-IDirect3DDevice9* g_D3DDevice9 = nullptr;
+IDirect3DDevice9* g_D3DDevice9		= nullptr;
+CGlobalVarsBase * g_GlobalVars		= nullptr;
+ICVar			* g_Cvar			= nullptr;
+IPanel			* g_VGuiPanel		= nullptr;
+ISurface		* g_VGUISurface		= nullptr;
 
 template< typename T >
 T* SeekInterface(char* mod, char* interf, bool seek = true)
@@ -80,11 +88,17 @@ namespace sdk
 		g_EngineTrace	= SeekInterface<IEngineTrace>	("engine.dll",	"EngineTraceClient");
 		g_EntityList	= SeekInterface<EntityList>		("client.dll",	"VClientEntityList");
 		g_ModelInfo		= SeekInterface<IVModelInfo>	("engine.dll",	"VModelInfoClient");
+		g_Cvar			= SeekInterface<ICVar>			("vstdlib.dll", "VEngineCvar");
+		g_VGUISurface	= SeekInterface<ISurface>		("vguimatsurface.dll", "VGUI_Surface");
+		g_VGuiPanel		= SeekInterface<IPanel>			("vgui2.dll", "VGUI_Panel");
 
-		g_D3DDevice9 = **(IDirect3DDevice9***)(utils::findPattern("shaderapidx9.dll", "A1 ? ? ? ? 50 8B 08 FF 51 0C") + 1);
+		g_D3DDevice9	= **(IDirect3DDevice9***)(utils::findPattern("shaderapidx9.dll", "A1 ? ? ? ? 50 8B 08 FF 51 0C") + 1);
 
-		auto uAddress = *(DWORD*)(utils::findPattern("Client.dll", "8B 0D ? ? ? ? 8B 01 5D FF") + 2);
-		g_ClientMode = *(ClientMode**)(uAddress);
+		g_GlobalVars	= *(CGlobalVarsBase**)(((*(PDWORD*)g_Client)[0]) + 0x1B);
+		g_GlobalVars	= (CGlobalVarsBase*)*(PDWORD)g_GlobalVars;
+
+		auto uAddress	= *(DWORD*)(utils::findPattern("Client.dll", "8B 0D ? ? ? ? 8B 01 5D FF") + 2);
+		g_ClientMode	= *(ClientMode**)(uAddress);
 
 	}
 }

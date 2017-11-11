@@ -27,7 +27,7 @@ private:
 	// 32 (entindex() % nTimestampRandomizeWindow ) is subtracted from gpGlobals->tickcount to Set the networking basis, prevents
 	//  all of the entities from forcing a new PackedEntity on the same tick (i.e., prevents them from getting lockstepped on this)
 	int       nTimestampRandomizeWindow;
-};
+}; extern CGlobalVarsBase* g_GlobalVars;
 
 typedef void*(*CreateInterfaceFn)(char* something, int something2);
 

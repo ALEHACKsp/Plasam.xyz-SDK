@@ -1,10 +1,20 @@
 #pragma once
 
-#include "BaseEntity.h"
+class BaseEntity;
+class CBaseHandle;
+
+#include "Matrix.h"
+#include "Utils.h"
 
 class EngineClient
 {
 	public:
+		void GetScreenSize(int& Width, int& Height)
+		{
+			typedef void(__thiscall* _GetScreenSize)(void*, int&, int&);
+			utils::emulate< _GetScreenSize >(this, 5)(this, Width, Height);
+		}
+
 		int getLocalPlayer(void)
 		{
 			typedef int(__thiscall* _GetLocalPlayer)(void*);
@@ -28,22 +38,28 @@ class EngineClient
 			typedef int(__thiscall* OriginalFn)(void*);
 			return utils::emulate<OriginalFn>(this, 20)(this);
 		}
+
+		const VMatrix&	WorldToScreenMatrix(void)
+		{
+			typedef VMatrix&(__thiscall* _Orig)(void*);
+			return utils::emulate<_Orig>(this, 37)(this);
+		}
 };
 
 class EntityList
 {
 private:
-	virtual void*				  GetClientNetworkable(int entnum) = 0;
-	virtual void*                 vtablepad0x1(void) = 0;
-	virtual void*                 vtablepad0x2(void) = 0;
+	virtual void*					GetClientNetworkable(int entnum) = 0;
+	virtual void*					vtablepad0x1(void) = 0;
+	virtual void*					vtablepad0x2(void) = 0;
 public:
-	virtual BaseEntity*         GetClientEntity(int entNum) = 0;
-	virtual BaseEntity*         GetClientEntityFromHandle(HANDLE hEnt) = 0;
-	virtual int                   NumberOfEntities(bool bIncludeNonNetworkable) = 0;
-	virtual int                   GetHighestEntityIndex(void) = 0;
+	virtual BaseEntity*				GetClientEntity(int entNum) = 0;
+	virtual BaseEntity*				GetClientEntityFromHandle(CBaseHandle hEnt) = 0;
+	virtual int						NumberOfEntities(bool bIncludeNonNetworkable) = 0;
+	virtual int						GetHighestEntityIndex(void) = 0;
 private:
-	virtual void                  SetMaxEntities(int maxEnts) = 0;
-	virtual int                   GetMaxEntities() = 0;
+	virtual void					SetMaxEntities(int maxEnts) = 0;
+	virtual int						GetMaxEntities() = 0;
 };
 
 

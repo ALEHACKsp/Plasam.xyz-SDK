@@ -20,6 +20,12 @@
     <Filter Include="Source Files\SDK\Classes">
       <UniqueIdentifier>{0a41b622-581e-41eb-a136-2e05cdcc9890}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\imgui">
+      <UniqueIdentifier>{a47d05ca-a978-407d-8dfd-1cf7b889aa98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\imgui\directx9">
+      <UniqueIdentifier>{ccba3ccc-5743-472d-9ae5-6b7646fd7733}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -60,6 +66,36 @@
     </ClCompile>
     <ClCompile Include="Matrix.cpp">
       <Filter>Source Files\SDK\structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui.cpp">
+      <Filter>Source Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_draw.cpp">
+      <Filter>Source Files\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\directx9\imgui_impl_dx9.cpp">
+      <Filter>Source Files\imgui\directx9</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals.cpp">
+      <Filter>Source Files\features</Filter>
+    </ClCompile>
+    <ClCompile Include="misc.cpp">
+      <Filter>Source Files\features</Filter>
+    </ClCompile>
+    <ClCompile Include="hwid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="md5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TriggerBot.cpp">
+      <Filter>Source Files\features</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -117,7 +153,6 @@
     <ClInclude Include="singleton.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="BaseWeapon.h" />
     <ClInclude Include="Matrix.h">
       <Filter>Source Files\SDK\structures</Filter>
     </ClInclude>
@@ -138,6 +173,63 @@
     </ClInclude>
     <ClInclude Include="Math.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseWeapon.h">
+      <Filter>Source Files\SDK\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="input.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imconfig.h">
+      <Filter>Source Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui.h">
+      <Filter>Source Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_internal.h">
+      <Filter>Source Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\stb_rect_pack.h">
+      <Filter>Source Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\stb_textedit.h">
+      <Filter>Source Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\stb_truetype.h">
+      <Filter>Source Files\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\directx9\imgui_impl_dx9.h">
+      <Filter>Source Files\imgui\directx9</Filter>
+    </ClInclude>
+    <ClInclude Include="Convar.h">
+      <Filter>Source Files\SDK\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals.h">
+      <Filter>Source Files\features</Filter>
+    </ClInclude>
+    <ClInclude Include="Paint.h">
+      <Filter>Source Files\SDK\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Options.h">
+      <Filter>Source Files\features</Filter>
+    </ClInclude>
+    <ClInclude Include="misc.h">
+      <Filter>Source Files\features</Filter>
+    </ClInclude>
+    <ClInclude Include="hwid.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="md5.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TriggerBot.h">
+      <Filter>Source Files\features</Filter>
+    </ClInclude>
+    <ClInclude Include="CHandle.h">
+      <Filter>Source Files\SDK\structures</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

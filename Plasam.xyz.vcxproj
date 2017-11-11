@@ -23,7 +23,7 @@
     <ProjectGuid>{D337B113-144F-480E-9B32-79472B14C1C3}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Plasamxyz</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -37,7 +37,7 @@
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -78,6 +78,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>Z:\DirectXSDK\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>Z:\DirectXSDK\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -159,11 +161,21 @@
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="HookManager.cpp" />
+    <ClCompile Include="hwid.cpp" />
+    <ClCompile Include="imgui\directx9\imgui_impl_dx9.cpp" />
+    <ClCompile Include="imgui\imgui.cpp" />
+    <ClCompile Include="imgui\imgui_draw.cpp" />
+    <ClCompile Include="input.cpp" />
     <ClCompile Include="Math.cpp" />
     <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="md5.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="misc.cpp" />
     <ClCompile Include="NetvarManager.cpp" />
     <ClCompile Include="sdk.cpp" />
+    <ClCompile Include="TriggerBot.cpp" />
     <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="Visuals.cpp" />
     <ClCompile Include="VMT.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -171,27 +183,45 @@
     <ClInclude Include="BaseEntity.h" />
     <ClInclude Include="BasePlayer.h" />
     <ClInclude Include="BaseWeapon.h" />
+    <ClInclude Include="CHandle.h" />
     <ClInclude Include="ClientClass.h" />
     <ClInclude Include="ClientDll.h" />
     <ClInclude Include="Color.h" />
+    <ClInclude Include="Convar.h" />
     <ClInclude Include="CUserCmd.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="EngineTrace.h" />
     <ClInclude Include="enums.h" />
     <ClInclude Include="Hacks.h" />
     <ClInclude Include="HookManager.h" />
+    <ClInclude Include="hwid.h" />
+    <ClInclude Include="imgui\directx9\imgui_impl_dx9.h" />
+    <ClInclude Include="imgui\imconfig.h" />
+    <ClInclude Include="imgui\imgui.h" />
+    <ClInclude Include="imgui\imgui_internal.h" />
+    <ClInclude Include="imgui\stb_rect_pack.h" />
+    <ClInclude Include="imgui\stb_textedit.h" />
+    <ClInclude Include="imgui\stb_truetype.h" />
+    <ClInclude Include="input.h" />
     <ClInclude Include="MaterialDefinitions.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="md5.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="misc.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="NetvarManager.h" />
+    <ClInclude Include="Options.h" />
+    <ClInclude Include="Paint.h" />
     <ClInclude Include="QAngle.h" />
     <ClInclude Include="recv.h" />
     <ClInclude Include="SDK.h" />
     <ClInclude Include="singleton.h" />
     <ClInclude Include="StudioDefinitions.h" />
+    <ClInclude Include="TriggerBot.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="Vector.h" />
+    <ClInclude Include="Visuals.h" />
     <ClInclude Include="VMT.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

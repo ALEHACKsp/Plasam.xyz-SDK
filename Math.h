@@ -4,6 +4,8 @@
 #include "Vector.h"
 #include "Matrix.h"
 
+#include "Engine.h"
+
 #include <DirectXMath.h>
 
 #define RAD2DEG(x) DirectX::XMConvertToDegrees(x)
@@ -19,4 +21,5 @@ namespace Math
 	void VectorAngles(const Vector& forward, QAngle& angles);
 	float GetFov(const QAngle& viewAngle, const QAngle& aimAngle);
 	QAngle CalcAngle(Vector src, Vector dst);
+	bool WorldToScreen(const Vector& in, Vector& out);
 }

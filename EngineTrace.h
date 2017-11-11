@@ -110,8 +110,15 @@ enum class TraceType
 };
 
 class CPhysCollide;
-class ICollideable;
 class BaseEntity;
+
+class ICollideable
+{
+public:
+	virtual void			    GetEntityHandle() = 0;
+	virtual const Vector&       GetMins() const = 0;
+	virtual const Vector&       GetMaxs() const = 0;
+};
 
 struct vcollide_t
 {

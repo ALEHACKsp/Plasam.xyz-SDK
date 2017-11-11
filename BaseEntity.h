@@ -2,6 +2,7 @@
 
 #include "Vector.h"
 #include "QAngle.h"
+#include "CHandle.h"
 #include "Matrix.h"
 #include "Math.h"
 #include "StudioDefinitions.h"
@@ -22,11 +23,22 @@ class BaseEntity
 {
 public:
 	//NetVars
+	NETVAR(int32_t		, m_iTeamNum	, "DT_BaseEntity"	, "m_iTeamNum"		);
+	NETVAR(int32_t		, m_lifeState	, "DT_BasePlayer"	, "m_lifeState"		);
+	NETVAR(Vector		, m_vecOrigin	, "DT_BaseEntity"	,	"m_vecOrigin"	);
 
-	NETVAR(Vector	, m_vecOrigin	, "DT_BaseEntity"	, "m_vecOrigin"		)
+	const matrix3x4_t& m_rgflCoordinateFrame()
+	{
+		static auto _m_rgflCoordinateFrame = NetvarSys::Get().GetOffset("DT_BaseEntity", "m_CollisionGroup") - 0x30;
+		return *(matrix3x4_t*)((uintptr_t)this + _m_rgflCoordinateFrame);
+	}
 
 	//Functions
-	bool isPlayer();
-	const model_t* GetModel();
-	bool SetupBones(matrix3x4_t *pBoneToWorldOut, int nMaxBones, int boneMask, float currentTime);
+	ICollideable*	GetCollideable();
+	bool			isPlayer();
+	bool			isAlive();
+	bool			isDormant();
+	const model_t*	GetModel();
+	Vector			GetHitboxPos(int hitbox_id);
+	bool			SetupBones(matrix3x4_t *pBoneToWorldOut, int nMaxBones, int boneMask, float currentTime);
 };
