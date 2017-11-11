@@ -10,7 +10,7 @@ void TriggerBot::CreateMove(CUserCmd* cmd)
 		return;
 
 	//Check triggerbot key state
-	if(!InputSys::Get().IsKeyDown(VK_TAB));
+	if(!g_InputSystem->IsButtonDown(KEY_LALT))
 		return;
 
 	BasePlayer* localPlayer = (BasePlayer*)g_EntityList->GetClientEntity(g_EngineClient->getLocalPlayer());

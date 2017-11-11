@@ -12,6 +12,7 @@
 //Include Interfaces
 #include "../SDK/Interfaces/Engine.h"
 #include "../SDK/Interfaces/ClientDll.h"
+#include "../SDK/Interfaces/InputSystem.h"
 
 //Include Functions
 #include "./Options.h"

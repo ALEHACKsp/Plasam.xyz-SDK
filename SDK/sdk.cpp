@@ -5,6 +5,7 @@
 #include "./Interfaces/Model.h"
 #include "./Interfaces/Convar.h"
 #include "./Interfaces/Paint.h"
+#include "./Interfaces/InputSystem.h"
 
 //Resolve externs
 
@@ -19,6 +20,7 @@ CGlobalVarsBase * g_GlobalVars		= nullptr;
 ICVar			* g_Cvar			= nullptr;
 IPanel			* g_VGuiPanel		= nullptr;
 ISurface		* g_VGUISurface		= nullptr;
+InputSystem		* g_InputSystem		= nullptr;
 
 template< typename T >
 T* SeekInterface(char* mod, char* interf, bool seek = true)
@@ -91,6 +93,7 @@ namespace sdk
 		g_Cvar			= SeekInterface<ICVar>			("vstdlib.dll", "VEngineCvar");
 		g_VGUISurface	= SeekInterface<ISurface>		("vguimatsurface.dll", "VGUI_Surface");
 		g_VGuiPanel		= SeekInterface<IPanel>			("vgui2.dll", "VGUI_Panel");
+		g_InputSystem	= SeekInterface<InputSystem>("inputsystem.dll", "InputSystemVersion");
 
 		g_D3DDevice9	= **(IDirect3DDevice9***)(utils::findPattern("shaderapidx9.dll", "A1 ? ? ? ? 50 8B 08 FF 51 0C") + 1);
 

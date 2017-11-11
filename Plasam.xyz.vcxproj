@@ -205,6 +205,7 @@
     <ClInclude Include="SDK\Interfaces\Convar.h" />
     <ClInclude Include="SDK\Interfaces\Engine.h" />
     <ClInclude Include="SDK\Interfaces\EngineTrace.h" />
+    <ClInclude Include="SDK\Interfaces\InputSystem.h" />
     <ClInclude Include="SDK\Interfaces\Model.h" />
     <ClInclude Include="SDK\Interfaces\Paint.h" />
     <ClInclude Include="SDK\SDK.h" />

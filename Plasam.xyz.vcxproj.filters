@@ -219,5 +219,8 @@
     <ClInclude Include="SDK\VMT.h">
       <Filter>Source Files\SDK</Filter>
     </ClInclude>
+    <ClInclude Include="SDK\Interfaces\InputSystem.h">
+      <Filter>Source Files\SDK\interfaces</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
