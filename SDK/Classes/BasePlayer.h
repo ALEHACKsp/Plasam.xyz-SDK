@@ -18,7 +18,6 @@ public:
 
 	//Functions
 
-	Vector	getEyePos();
 	Vector	GetEyePos();
 	bool	CanSeePlayer(BasePlayer* player, int hitbox);
 };

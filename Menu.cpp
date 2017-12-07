@@ -56,6 +56,7 @@ void aimTab()
 	ImGui::SliderFloat("Kill Timeout:", &options::aimbot::killTimeout, 0, 1, "%.3fs");
 
 	ImGui::Checkbox("Friendly Fire", &options::aimbot::friendlyFire);
+	ImGui::Checkbox("Closest Bone", &options::aimbot::closestBoneEnabled);
 
 	ImGui::NextColumn();
 

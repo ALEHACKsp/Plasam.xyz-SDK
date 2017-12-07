@@ -1,13 +1,46 @@
 #include "Aimbot.h"
 
 //Resolve externs
-bool	options::aimbot::enabled		= false;
-bool	options::aimbot::friendlyFire	= false;
-int		options::aimbot::bone			= HITBOX_HEAD;
-float	options::aimbot::fov			= 0;
-float	options::aimbot::smoothing		= 0;
-float	options::aimbot::rcs			= 2;
-float	options::aimbot::killTimeout	= 0;
+bool	options::aimbot::enabled			= false;
+bool	options::aimbot::closestBoneEnabled = false;
+bool	options::aimbot::friendlyFire		= false;
+int		options::aimbot::bone				= HITBOX_HEAD;
+float	options::aimbot::fov				= 0;
+float	options::aimbot::smoothing			= 0;
+float	options::aimbot::rcs				= 2;
+float	options::aimbot::killTimeout		= 0;
+
+const int importantBones[] = {HITBOX_HEAD,HITBOX_CHEST,HITBOX_LOWER_NECK,HITBOX_NECK};
+
+Vector getClosestSpot(BasePlayer* localPlayer, BasePlayer* enemy)
+{
+	QAngle viewAngles;
+	g_EngineClient->getViewAngles(viewAngles);
+
+	float tempFov = options::aimbot::fov;
+
+	Vector pVecTarget = localPlayer->GetEyePos();
+
+	Vector tempSpot = { 0,0,0 };
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (!localPlayer->CanSeePlayer(enemy, importantBones[i]))
+			continue;
+
+		Vector cbVecTarget = enemy->GetHitboxPos(importantBones[i]);
+
+		float cbFov = Math::GetFov(viewAngles, Math::CalcAngle(cbVecTarget, pVecTarget));
+
+		if (cbFov < tempFov)
+		{
+			tempFov = cbFov;
+			tempSpot = cbVecTarget;
+		}
+	}
+
+	return tempSpot;
+}
 
 BasePlayer* getClosestPlayer(BasePlayer* localPlayer)
 {
@@ -117,7 +150,17 @@ namespace aimbot
 
 		if (Enemy != NULL)
 		{
-			Vector eVecTarget = Enemy->GetHitboxPos(options::aimbot::bone);
+			Vector eVecTarget;
+
+			if (options::aimbot::closestBoneEnabled)
+			{
+				eVecTarget = getClosestSpot(localPlayer, Enemy);
+			}
+			else
+			{
+				eVecTarget = Enemy->GetHitboxPos(options::aimbot::bone);
+			}
+			
 			Vector pVecTarget = localPlayer->GetEyePos();
 
 

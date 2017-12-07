@@ -2,11 +2,6 @@
 
 #include "../Structures/Matrix.h"
 
-Vector BasePlayer::getEyePos()
-{
-	return NULL;
-};
-
 Vector BasePlayer::GetEyePos()
 {
 	return m_vecOrigin() + m_vecViewOffset();

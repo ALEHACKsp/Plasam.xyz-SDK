@@ -9,6 +9,7 @@ namespace options
 	namespace aimbot
 	{
 		extern bool		enabled;
+		extern bool		closestBoneEnabled;
 		extern bool		friendlyFire;
 		extern int		bone;
 		extern float	fov;
